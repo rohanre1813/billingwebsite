@@ -112,34 +112,34 @@ const benefits = [
 
 const faqs = [
   {
-    question: "Is JusBill completely free to use?",
+    question: "What is JusBill and why is it free?",
     answer:
-      "Yes! JusBill is 100% free. You can create unlimited GST invoices, receipts, salary slips, and use the GST calculator without any signup or payment required.",
+      "JusBill is a comprehensive, web-based billing platform designed specifically for Indian businesses. We offer tools like GST Invoice Generators, Receipt Makers, and Salary Slip generators. It is 100% free because we are supported by tasteful, non-intrusive advertisements. There are no hidden fees, subscriptions, or watermarks.",
   },
   {
-    question: "Does JusBill store my billing data?",
+    question: "How secure is my business and invoice data?",
     answer:
-      "No. All your data is processed locally in your browser. We do not store, collect, or share any of your business or client information.",
+      "Extremely secure. JusBill operates entirely as a client-side application. This means when you enter your buyer details, pricing, and GSTINs, that data never leaves your computer. We do not store your data on our servers. Once you close your browser tab, the data is permanently erased. Your privacy is our top priority.",
   },
   {
-    question: "Can I download the invoice as a PDF?",
+    question: "Does the invoice generator support CGST, SGST, and IGST?",
     answer:
-      "Yes. Every tool on JusBill allows you to download a professional PDF of your invoice, receipt, or salary slip with a single click.",
-  },
-  {
-    question: "Is the GST calculation as per Indian tax laws?",
-    answer:
-      "Yes. JusBill calculates CGST and SGST for intrastate supply and IGST for interstate supply as mandated by the Indian GST Act.",
+      "Yes. Our tools are built strictly according to the Indian Central Goods and Services Tax Rules, 2017. The invoice generator automatically calculates CGST and SGST for intrastate (same state) supplies, and IGST for interstate (between states) supplies based on the GST rate you select.",
   },
   {
     question: "Do I need a GSTIN to use the invoice generator?",
     answer:
-      "No. GSTIN is optional. If you are a small business below the GST threshold or an unregistered business, you can leave the GSTIN field blank.",
+      "No, a GSTIN is completely optional. If you are a small business operating below the GST threshold, a freelancer, or an unregistered business, you can simply leave the GSTIN field blank and generate a standard Bill of Supply or regular invoice.",
   },
   {
-    question: "Can I use JusBill on my mobile phone?",
+    question: "Can I download the invoice as a PDF?",
     answer:
-      "Absolutely! JusBill is fully responsive and works perfectly on Android and iPhone browsers. No app installation needed.",
+      "Yes. Every tool on JusBill — including the Proforma Invoice and Salary Slip generators — allows you to download a professional, print-ready PDF document with a single click. You can also print it directly from your browser.",
+  },
+  {
+    question: "Who can use JusBill?",
+    answer:
+      "JusBill is perfect for Indian freelancers, shopkeepers, consultants, digital agencies, and small-to-medium enterprises (MSMEs). Anyone who needs to generate a professional billing document quickly without paying for expensive software will benefit from our tools.",
   },
 ];
 
@@ -249,11 +249,24 @@ export default function HomePage() {
       </section>
 
       {/* Inline Ad */}
-      <div className="bg-gray-50 py-4">
+      <div className="bg-gray-50 py-4 border-b border-gray-100">
         <div className="container-xl flex justify-center">
           <AdPlaceholder size="leaderboard" label="In-content Ad" />
         </div>
       </div>
+
+      {/* Trust & Description Section (SEO/AdSense content) */}
+      <section className="py-16 bg-white border-b border-gray-100">
+        <div className="container-xl max-w-4xl mx-auto text-center">
+          <h2 className="text-3xl font-heading font-bold text-gray-900 mb-6">What is JusBill?</h2>
+          <p className="text-lg text-gray-600 leading-relaxed mb-6">
+            JusBill is India&apos;s premier free online platform for generating professional, GST-compliant billing documents. We understand that running a small business, managing a freelance career, or operating a retail shop is hard enough without having to worry about complex accounting software or messy Excel templates. 
+          </p>
+          <p className="text-lg text-gray-600 leading-relaxed">
+            That is why we built a suite of intuitive, browser-based tools that allow anyone to create stunning GST invoices, proforma invoices, payment receipts, and salary slips in seconds. Our tools automatically handle complex CGST, SGST, and IGST calculations so you can focus on what matters most — growing your business. Best of all? It is completely free, secure, and requires no account registration.
+          </p>
+        </div>
+      </section>
 
       {/* Tools Section */}
       <section className="py-20 bg-white">

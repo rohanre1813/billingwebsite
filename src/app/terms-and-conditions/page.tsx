@@ -17,64 +17,62 @@ function Section({ title, children }: { title: string; children: React.ReactNode
 
 export default function TermsPage() {
   return (
-    <div className="container-xl py-16 max-w-3xl mx-auto">
-      <h1 className="text-4xl font-heading font-extrabold text-gray-900 mb-3">Terms and Conditions</h1>
-      <p className="text-gray-400 text-sm mb-10">Last updated: January 15, 2024</p>
+    <div className="container-xl py-16 max-w-4xl mx-auto">
+      <h1 className="text-4xl sm:text-5xl font-heading font-extrabold text-gray-900 mb-4">Terms and Conditions</h1>
+      <p className="text-gray-500 text-sm mb-12 border-b border-gray-100 pb-6">Last updated: {new Date().toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' })}</p>
 
-      <Section title="Acceptance of Terms">
-        <p>By accessing and using JusBill (jusbill.online), you accept and agree to be bound by these Terms and Conditions. If you do not agree to these terms, please do not use our services.</p>
-      </Section>
+      <div className="space-y-10">
+        <Section title="1. Agreement to Terms">
+          <p>By accessing, browsing, or using JusBill (located at <strong>billing.jusbill.online</strong>), you acknowledge that you have read, understood, and agree to be bound by these Terms and Conditions. If you do not agree with any part of these terms, you must discontinue use of the Website immediately.</p>
+        </Section>
 
-      <Section title="Use of Services">
-        <p>JusBill provides free online tools for GST invoice generation, receipt creation, GST calculation, and related billing activities. You agree to:</p>
-        <ul className="list-disc list-inside space-y-1">
-          <li>Use the services only for lawful purposes</li>
-          <li>Not misuse or attempt to disrupt our services</li>
-          <li>Ensure the accuracy of information you enter in our tools</li>
-          <li>Not use our tools to create fraudulent documents</li>
-        </ul>
-      </Section>
+        <Section title="2. Description of Service">
+          <p>JusBill provides free, web-based tools designed to help Indian businesses generate billing documents, including but not limited to GST Invoices, Proforma Invoices, Receipts, and Salary Slips (collectively, the &quot;Services&quot;). The Services are provided for convenience and organizational purposes only.</p>
+        </Section>
 
-      <Section title="No Warranty">
-        <p>JusBill provides tools &quot;as is&quot; without any warranty of any kind. While we strive for accuracy in GST calculations, we do not guarantee that:</p>
-        <ul className="list-disc list-inside space-y-1">
-          <li>Calculations are error-free for all scenarios</li>
-          <li>Generated invoices are accepted by all tax authorities in all situations</li>
-          <li>The service will be available 100% of the time</li>
-        </ul>
-        <p>Always consult a qualified Chartered Accountant or tax professional for complex GST matters.</p>
-      </Section>
+        <Section title="3. User Responsibilities">
+          <p>When using our Services, you agree and warrant that:</p>
+          <ul className="list-disc list-inside space-y-2 ml-2 mt-3">
+            <li>You are responsible for the accuracy, legality, and validity of the data you enter into the generated documents.</li>
+            <li>You will not use the Services to generate fraudulent, deceptive, or illegal documents.</li>
+            <li>You understand that JusBill does not verify the GSTIN, PAN, or financial numbers entered by you.</li>
+            <li>You will use the generated documents in compliance with the Central Goods and Services Tax Act, 2017 (and related state laws) as applicable to your business.</li>
+          </ul>
+        </Section>
 
-      <Section title="Limitation of Liability">
-        <p>JusBill shall not be liable for any direct, indirect, incidental, or consequential damages resulting from:</p>
-        <ul className="list-disc list-inside space-y-1">
-          <li>Errors in GST calculations due to incorrect data entry</li>
-          <li>Tax penalties arising from use of our tools</li>
-          <li>Loss of business data (we do not store your data)</li>
-          <li>Interruption of service</li>
-        </ul>
-      </Section>
+        <Section title="4. Disclaimer of Warranties and Tax Advice">
+          <p><strong>The Services are provided on an &quot;AS IS&quot; and &quot;AS AVAILABLE&quot; basis.</strong></p>
+          <p className="mt-3">JusBill explicitly disclaims all warranties, express or implied. We do not guarantee that the GST calculations, tax rates, or document formats will be 100% error-free or perfectly aligned with every specific business scenario.</p>
+          <p className="mt-3"><strong>No Tax Advice:</strong> JusBill is a software tool, not a Chartered Accountant or tax consultant. The use of our tool does not constitute legal, financial, accounting, or tax advice. You are strictly advised to review all generated documents and consult a qualified tax professional before filing returns or submitting documents to the government.</p>
+        </Section>
 
-      <Section title="Intellectual Property">
-        <p>All content on JusBill — including the website design, code, blog articles, and tools — is the intellectual property of JusBill. You may not copy, reproduce, or redistribute our content without permission.</p>
-        <p>The invoices and documents you generate using our tools are your own property.</p>
-      </Section>
+        <Section title="5. Limitation of Liability">
+          <p>To the maximum extent permitted by applicable Indian law, in no event shall JusBill, its developers, or its affiliates be liable for any indirect, incidental, special, consequential, or punitive damages, including without limitation:</p>
+          <ul className="list-disc list-inside space-y-2 ml-2 mt-3">
+            <li>Loss of profits, revenue, or business opportunities.</li>
+            <li>Penalties, fines, or interest levied by the Income Tax Department or GST Authorities due to incorrect document generation.</li>
+            <li>Loss of data, as all processing is done locally on your device and we provide no cloud storage or backup services.</li>
+          </ul>
+        </Section>
 
-      <Section title="Advertising">
-        <p>JusBill displays advertisements through Google AdSense and may display other third-party ads. We are not responsible for the content of these advertisements.</p>
-      </Section>
+        <Section title="6. Intellectual Property Rights">
+          <p>The Website, including its original content, UI/UX design, graphics, and source code, are owned by JusBill and are protected by international copyright and intellectual property laws. You may not copy, reproduce, or distribute the Website&apos;s code or design without explicit written permission.</p>
+          <p className="mt-3">However, you hold all rights and ownership to the specific text, data, and PDF documents you generate using our tools.</p>
+        </Section>
 
-      <Section title="Changes to Terms">
-        <p>We reserve the right to modify these terms at any time. Continued use of JusBill after changes constitutes acceptance of the new terms.</p>
-      </Section>
+        <Section title="7. Advertising and Third-Party Links">
+          <p>JusBill is a free service supported by advertising (such as Google AdSense). We may display ads on the Website. We are not responsible for the products, services, or claims made in these third-party advertisements. Clicking on an ad is at your own risk and subject to the third party&apos;s terms of service.</p>
+        </Section>
 
-      <Section title="Governing Law">
-        <p>These terms shall be governed by the laws of India. Any disputes shall be subject to the jurisdiction of courts in India.</p>
-      </Section>
+        <Section title="8. Modifications to the Service and Terms">
+          <p>We reserve the right to modify, suspend, or discontinue any part of the Services at any time without notice. We also reserve the right to update these Terms and Conditions at our discretion. Your continued use of the Website after any changes indicates your acceptance of the new Terms.</p>
+        </Section>
 
-      <Section title="Contact">
-        <p>For questions about these terms, contact us at <a href="mailto:support@jusbill.online" className="text-brand-600 hover:underline">support@jusbill.online</a>.</p>
-      </Section>
+        <Section title="9. Contact Information">
+          <p>If you have any questions or concerns regarding these Terms and Conditions, please contact us at:</p>
+          <p className="mt-3 font-semibold">Email: <a href="mailto:jusbill.contact@gmail.com" className="text-brand-600 hover:underline">jusbill.contact@gmail.com</a></p>
+        </Section>
+      </div>
     </div>
   );
 }

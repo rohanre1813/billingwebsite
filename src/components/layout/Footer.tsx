@@ -43,7 +43,7 @@ export default function Footer() {
             <div className="flex flex-col gap-2 text-sm text-gray-400">
               <div className="flex items-center gap-2">
                 <Mail size={14} className="text-brand-400 shrink-0" />
-                <span>support@jusbill.online</span>
+                <span>jusbill.contact@gmail.com</span>
               </div>
               <div className="flex items-center gap-2">
                 <MapPin size={14} className="text-brand-400 shrink-0" />
@@ -107,6 +107,22 @@ export default function Footer() {
               </p>
             </div>
           </div>
+        </div>
+      </div>
+
+      {/* Promotional Banner */}
+      <div className="border-t border-gray-800 bg-gray-900/50">
+        <div className="container-xl py-8 text-center max-w-4xl mx-auto">
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-brand-900/50 text-brand-400 text-xs font-semibold uppercase tracking-wider mb-4 border border-brand-800/50">
+            <span className="relative flex h-2 w-2">
+              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-brand-400 opacity-75"></span>
+              <span className="relative inline-flex rounded-full h-2 w-2 bg-brand-500"></span>
+            </span>
+            Premium Business Solution
+          </div>
+          <p className="text-gray-300 leading-relaxed text-sm md:text-base">
+            Looking for a complete business platform? Visit <a href="https://jusbill.online" className="text-brand-400 font-semibold hover:text-brand-300 hover:underline transition-colors" target="_blank" rel="noopener noreferrer">jusbill.online</a> — a modern, full-stack invoicing and inventory management solution designed for small to medium-sized businesses, featuring an elegant UI, AI-powered business insights, real-time analytics, and automated PDF generation.
+          </p>
         </div>
       </div>
 
