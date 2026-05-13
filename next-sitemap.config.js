@@ -1,6 +1,6 @@
 /** @type {import('next-sitemap').IConfig} */
 module.exports = {
-  siteUrl: "https://jusbill.online",
+  siteUrl: "https://billing.jusbill.online",
   generateRobotsTxt: true,
   sitemapSize: 5000,
   changefreq: "weekly",
