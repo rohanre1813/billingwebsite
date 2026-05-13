@@ -7,7 +7,7 @@ User-agent: Googlebot
 Allow: /
 
 # Host
-Host: https://jusbill.online
+Host: https://billing.jusbill.online
 
 # Sitemaps
-Sitemap: https://jusbill.online/sitemap.xml
+Sitemap: https://billing.jusbill.online/sitemap.xml

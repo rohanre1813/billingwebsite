@@ -8,11 +8,11 @@ export const metadata: Metadata = {
   title: "GST & Billing Blog — Tips, Guides & Tax News — JusBill",
   description:
     "Learn about GST invoicing, billing, CGST, SGST, IGST, and Indian tax laws. Free guides and tips for Indian freelancers and small businesses.",
-  alternates: { canonical: "https://jusbill.online/blog" },
+  alternates: { canonical: "https://billing.jusbill.online/blog" },
   openGraph: {
     title: "GST & Billing Blog — JusBill",
     description: "Learn GST invoicing, billing and tax tips for Indian businesses.",
-    url: "https://jusbill.online/blog",
+    url: "https://billing.jusbill.online/blog",
   },
 };
 

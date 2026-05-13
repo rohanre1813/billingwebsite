@@ -13,11 +13,11 @@ export const metadata: Metadata = {
     "CGST SGST IGST invoice",
     "tax invoice generator",
   ],
-  alternates: { canonical: "https://jusbill.online/gst-invoice-generator" },
+  alternates: { canonical: "https://billing.jusbill.online/gst-invoice-generator" },
   openGraph: {
     title: "Free GST Invoice Generator Online — JusBill",
     description: "Create GST invoices with CGST, SGST & IGST. Download PDF free.",
-    url: "https://jusbill.online/gst-invoice-generator",
+    url: "https://billing.jusbill.online/gst-invoice-generator",
   },
 };
 
@@ -33,12 +33,12 @@ export default function GSTInvoicePage() {
             name: "Free GST Invoice Generator Online",
             description:
               "Create professional GST invoices with CGST SGST IGST calculations online for free",
-            url: "https://jusbill.online/gst-invoice-generator",
+            url: "https://billing.jusbill.online/gst-invoice-generator",
             breadcrumb: {
               "@type": "BreadcrumbList",
               itemListElement: [
-                { "@type": "ListItem", position: 1, name: "Home", item: "https://jusbill.online" },
-                { "@type": "ListItem", position: 2, name: "GST Invoice Generator", item: "https://jusbill.online/gst-invoice-generator" },
+                { "@type": "ListItem", position: 1, name: "Home", item: "https://billing.jusbill.online" },
+                { "@type": "ListItem", position: 2, name: "GST Invoice Generator", item: "https://billing.jusbill.online/gst-invoice-generator" },
               ],
             },
           }),

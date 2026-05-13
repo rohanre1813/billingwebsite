@@ -5,7 +5,7 @@ import { CheckCircle, Users, Target, Heart } from "lucide-react";
 export const metadata: Metadata = {
   title: "About JusBill — Free GST Billing Platform for India",
   description: "Learn about JusBill, India's free online GST invoicing and billing platform. Our mission is to make professional billing accessible to every Indian business.",
-  alternates: { canonical: "https://jusbill.online/about" },
+  alternates: { canonical: "https://billing.jusbill.online/about" },
 };
 
 export default function AboutPage() {

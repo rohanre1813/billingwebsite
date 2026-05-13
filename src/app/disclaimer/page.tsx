@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Disclaimer — JusBill",
   description: "Read JusBill's disclaimer about our free GST billing tools, tax calculations, and legal advice limitations.",
-  alternates: { canonical: "https://jusbill.online/disclaimer" },
+  alternates: { canonical: "https://billing.jusbill.online/disclaimer" },
 };
 
 export default function DisclaimerPage() {

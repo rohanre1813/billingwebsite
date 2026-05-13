@@ -6,11 +6,11 @@ export const metadata: Metadata = {
   title: "Free Proforma Invoice Generator Online — JusBill",
   description:
     "Create professional proforma invoices online for free. Perfect for quotations and advance payments. Download PDF instantly.",
-  alternates: { canonical: "https://jusbill.online/proforma-invoice-generator" },
+  alternates: { canonical: "https://billing.jusbill.online/proforma-invoice-generator" },
   openGraph: {
     title: "Free Proforma Invoice Generator Online — JusBill",
     description: "Create proforma invoices and download PDF free for Indian businesses.",
-    url: "https://jusbill.online/proforma-invoice-generator",
+    url: "https://billing.jusbill.online/proforma-invoice-generator",
   },
 };
 
@@ -24,12 +24,12 @@ export default function ProformaInvoicePage() {
             "@context": "https://schema.org",
             "@type": "WebPage",
             name: "Free Proforma Invoice Generator Online",
-            url: "https://jusbill.online/proforma-invoice-generator",
+            url: "https://billing.jusbill.online/proforma-invoice-generator",
             breadcrumb: {
               "@type": "BreadcrumbList",
               itemListElement: [
-                { "@type": "ListItem", position: 1, name: "Home", item: "https://jusbill.online" },
-                { "@type": "ListItem", position: 2, name: "Proforma Invoice Generator", item: "https://jusbill.online/proforma-invoice-generator" },
+                { "@type": "ListItem", position: 1, name: "Home", item: "https://billing.jusbill.online" },
+                { "@type": "ListItem", position: 2, name: "Proforma Invoice Generator", item: "https://billing.jusbill.online/proforma-invoice-generator" },
               ],
             },
           }),

@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Terms and Conditions — JusBill",
   description: "Read JusBill's terms and conditions for using our free GST billing and invoicing tools.",
-  alternates: { canonical: "https://jusbill.online/terms-and-conditions" },
+  alternates: { canonical: "https://billing.jusbill.online/terms-and-conditions" },
 };
 
 function Section({ title, children }: { title: string; children: React.ReactNode }) {

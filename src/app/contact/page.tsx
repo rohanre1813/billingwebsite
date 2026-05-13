@@ -5,7 +5,7 @@ import ContactForm from "./ContactForm";
 export const metadata: Metadata = {
   title: "Contact JusBill — Get in Touch",
   description: "Contact JusBill for support, feedback, or business inquiries. We'd love to hear from you.",
-  alternates: { canonical: "https://jusbill.online/contact" },
+  alternates: { canonical: "https://billing.jusbill.online/contact" },
 };
 
 export default function ContactPage() {

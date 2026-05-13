@@ -20,7 +20,7 @@ export const metadata: Metadata = {
   title: "JusBill — Free GST Billing & Invoice Tools Online",
   description:
     "Create GST bills and invoices online for free. No signup required. Instant PDF download. Made for Indian freelancers, shopkeepers, and small businesses.",
-  alternates: { canonical: "https://jusbill.online" },
+  alternates: { canonical: "https://billing.jusbill.online" },
 };
 
 const tools = [
@@ -177,7 +177,7 @@ export default function HomePage() {
             name: "JusBill — Free GST Billing & Invoice Tools",
             description:
               "Free online GST invoice generator and billing tools for Indian businesses",
-            url: "https://jusbill.online",
+            url: "https://billing.jusbill.online",
             mainEntity: {
               "@type": "SoftwareApplication",
               name: "JusBill",

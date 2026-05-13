@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Privacy Policy — JusBill",
   description: "Read JusBill's privacy policy. Learn how we handle your data and protect your privacy when using our free GST billing tools.",
-  alternates: { canonical: "https://jusbill.online/privacy-policy" },
+  alternates: { canonical: "https://billing.jusbill.online/privacy-policy" },
 };
 
 function Section({ title, children }: { title: string; children: React.ReactNode }) {

@@ -4,7 +4,7 @@ import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://jusbill.online"),
+  metadataBase: new URL("https://billing.jusbill.online"),
   title: {
     default: "JusBill — Free GST Billing & Invoice Tools Online",
     template: "%s | JusBill",
@@ -26,7 +26,7 @@ export const metadata: Metadata = {
     "online billing India",
     "CGST SGST IGST calculator",
   ],
-  authors: [{ name: "JusBill", url: "https://jusbill.online" }],
+  authors: [{ name: "JusBill", url: "https://billing.jusbill.online" }],
   creator: "JusBill",
   publisher: "JusBill",
   robots: {
@@ -37,7 +37,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "en_IN",
-    url: "https://jusbill.online",
+    url: "https://billing.jusbill.online",
     siteName: "JusBill",
     title: "JusBill — Free GST Billing & Invoice Tools Online",
     description:
@@ -58,7 +58,7 @@ export const metadata: Metadata = {
     images: ["/og-image.png"],
   },
   alternates: {
-    canonical: "https://jusbill.online",
+    canonical: "https://billing.jusbill.online",
   },
 };
 
@@ -79,12 +79,12 @@ export default function RootLayout({
               "@context": "https://schema.org",
               "@type": "WebSite",
               name: "JusBill",
-              url: "https://jusbill.online",
+              url: "https://billing.jusbill.online",
               description:
                 "Free online GST billing and invoicing platform for Indian businesses",
               potentialAction: {
                 "@type": "SearchAction",
-                target: "https://jusbill.online/blog?q={search_term_string}",
+                target: "https://billing.jusbill.online/blog?q={search_term_string}",
                 "query-input": "required name=search_term_string",
               },
             }),

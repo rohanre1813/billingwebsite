@@ -5,11 +5,11 @@ export const metadata: Metadata = {
   title: "Free Salary Slip Generator Online — JusBill",
   description:
     "Generate professional salary slips online for free. Add earnings, deductions, PF, TDS and download PDF instantly. Made for Indian HR teams and businesses.",
-  alternates: { canonical: "https://jusbill.online/salary-slip-generator" },
+  alternates: { canonical: "https://billing.jusbill.online/salary-slip-generator" },
   openGraph: {
     title: "Free Salary Slip Generator Online — JusBill",
     description: "Create salary slips with PF, TDS deductions and download PDF free.",
-    url: "https://jusbill.online/salary-slip-generator",
+    url: "https://billing.jusbill.online/salary-slip-generator",
   },
 };
 
@@ -23,12 +23,12 @@ export default function SalarySlipPage() {
             "@context": "https://schema.org",
             "@type": "WebPage",
             name: "Free Salary Slip Generator Online",
-            url: "https://jusbill.online/salary-slip-generator",
+            url: "https://billing.jusbill.online/salary-slip-generator",
             breadcrumb: {
               "@type": "BreadcrumbList",
               itemListElement: [
-                { "@type": "ListItem", position: 1, name: "Home", item: "https://jusbill.online" },
-                { "@type": "ListItem", position: 2, name: "Salary Slip Generator", item: "https://jusbill.online/salary-slip-generator" },
+                { "@type": "ListItem", position: 1, name: "Home", item: "https://billing.jusbill.online" },
+                { "@type": "ListItem", position: 2, name: "Salary Slip Generator", item: "https://billing.jusbill.online/salary-slip-generator" },
               ],
             },
           }),

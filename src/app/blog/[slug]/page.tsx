@@ -23,14 +23,14 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   return {
     title: `${post.meta.title} — JusBill Blog`,
     description: post.meta.description,
-    alternates: { canonical: `https://jusbill.online/blog/${slug}` },
+    alternates: { canonical: `https://billing.jusbill.online/blog/${slug}` },
     openGraph: {
       title: post.meta.title,
       description: post.meta.description,
       type: "article",
       publishedTime: post.meta.date,
       authors: [post.meta.author],
-      url: `https://jusbill.online/blog/${slug}`,
+      url: `https://billing.jusbill.online/blog/${slug}`,
     },
   };
 }
@@ -51,9 +51,9 @@ export default async function BlogArticlePage({ params }: Props) {
             headline: post.meta.title,
             description: post.meta.description,
             author: { "@type": "Organization", name: post.meta.author },
-            publisher: { "@type": "Organization", name: "JusBill", url: "https://jusbill.online" },
+            publisher: { "@type": "Organization", name: "JusBill", url: "https://billing.jusbill.online" },
             datePublished: post.meta.date,
-            url: `https://jusbill.online/blog/${slug}`,
+            url: `https://billing.jusbill.online/blog/${slug}`,
           }),
         }}
       />
