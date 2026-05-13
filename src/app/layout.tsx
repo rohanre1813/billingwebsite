@@ -9,6 +9,10 @@ export const metadata: Metadata = {
     default: "JusBill — Free GST Billing & Invoice Tools Online",
     template: "%s | JusBill",
   },
+  verification: {
+  google: "38nrBs6JRy2Vd_4rMpeiya3uJ_iXSpzWoNkipdFK-EM",
+  
+},
   description:
     "JusBill is a free online billing and invoicing platform for Indian businesses. Create GST invoices, receipts, salary slips and more — no signup required.",
   keywords: [
