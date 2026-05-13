@@ -10,7 +10,6 @@ module.exports = {
       { userAgent: "*", allow: "/" },
       { userAgent: "Googlebot", allow: "/" },
     ],
-    additionalSitemaps: ["https://billing.jusbill.online/sitemap.xml"],
   },
   exclude: ["/404", "/500"],
 };
