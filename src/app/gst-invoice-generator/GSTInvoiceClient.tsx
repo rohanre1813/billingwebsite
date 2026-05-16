@@ -117,7 +117,7 @@ export default function GSTInvoiceClient() {
         </div>
 
         {/* Main Content */}
-        <div className="container-xl py-8">
+        <div className="container-xl py-8 overflow-hidden">
           <div className="flex flex-col xl:flex-row gap-8">
             {/* Left: Form */}
             <div className={`flex-1 ${showPreview ? "hidden xl:block" : ""}`}>
@@ -141,8 +141,8 @@ export default function GSTInvoiceClient() {
             </div>
 
             {/* Right: Preview */}
-            <div className={`flex-1 ${!showPreview ? "hidden xl:block" : ""}`}>
-              <div className="sticky top-24">
+            <div className={`xl:max-w-[520px] w-full min-w-0 ${!showPreview ? "hidden xl:block" : ""}`}>
+              <div className="sticky top-24 overflow-hidden">
                 <div className="flex items-center justify-between mb-4 no-print">
                   <h2 className="font-heading font-bold text-gray-800">Live Preview</h2>
                   <button
@@ -153,7 +153,7 @@ export default function GSTInvoiceClient() {
                     <PenLine size={14} /> Edit
                   </button>
                 </div>
-                <div ref={previewRef}>
+                <div ref={previewRef} style={{ transform: "scale(0.62)", transformOrigin: "top left", width: "161.3%" }}>
                   <InvoicePreview isProforma={false} />
                 </div>
               </div>

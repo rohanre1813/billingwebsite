@@ -64,7 +64,7 @@ export default function ProformaWrapper() {
             <AdPlaceholder size="leaderboard" />
           </div>
         </div>
-        <div className="container-xl py-8">
+        <div className="container-xl py-8 overflow-hidden">
           <div className="flex gap-3 mb-6 no-print">
             <button type="button" onClick={() => setShowPreview(!showPreview)} className="btn-secondary text-sm">
               <Eye size={16} /> {showPreview ? "Edit Form" : "Preview"}
@@ -80,10 +80,12 @@ export default function ProformaWrapper() {
             <div className={`flex-1 ${showPreview ? "hidden xl:block" : ""}`}>
               <InvoiceForm isProforma={true} />
             </div>
-            <div className={`flex-1 ${!showPreview ? "hidden xl:block" : ""}`}>
-              <div className="sticky top-24">
+            <div className={`xl:max-w-[520px] w-full min-w-0 ${!showPreview ? "hidden xl:block" : ""}`}>
+              <div className="sticky top-24 overflow-hidden">
                 <h2 className="font-heading font-bold text-gray-800 mb-4 no-print">Proforma Preview</h2>
-                <InvoicePreview isProforma={true} />
+                <div style={{ transform: "scale(0.62)", transformOrigin: "top left", width: "161.3%" }}>
+                  <InvoicePreview isProforma={true} />
+                </div>
               </div>
             </div>
           </div>
