@@ -25,17 +25,46 @@ export default function ProformaWrapper() {
   const [showPreview, setShowPreview] = useState(false);
 
   const handleDownloadPDF = async () => {
-    const element = document.getElementById("invoice-preview");
-    if (!element) return;
-    const { default: html2canvas } = await import("html2canvas");
-    const { default: jsPDF } = await import("jspdf");
-    const canvas = await html2canvas(element, { scale: 2, backgroundColor: "#ffffff" });
-    const imgData = canvas.toDataURL("image/png");
-    const pdf = new jsPDF("p", "mm", "a4");
-    const pdfWidth = pdf.internal.pageSize.getWidth();
-    const pdfHeight = (canvas.height * pdfWidth) / canvas.width;
-    pdf.addImage(imgData, "PNG", 0, 0, pdfWidth, pdfHeight);
-    pdf.save(`${methods.getValues("invoiceNumber") || "proforma"}.pdf`);
+    const originalElement = document.getElementById("invoice-preview");
+    if (!originalElement) return;
+
+    try {
+      const tempContainer = document.createElement("div");
+      tempContainer.style.position = "absolute";
+      tempContainer.style.left = "-9999px";
+      tempContainer.style.top = "-9999px";
+      tempContainer.style.width = "800px";
+      document.body.appendChild(tempContainer);
+
+      const clonedElement = originalElement.cloneNode(true) as HTMLElement;
+      clonedElement.classList.remove("hidden");
+      clonedElement.style.display = "block";
+      tempContainer.appendChild(clonedElement);
+
+      const { default: html2canvas } = await import("html2canvas");
+      const jsPDFModule = await import("jspdf");
+      const PDFClass = jsPDFModule.jsPDF || jsPDFModule.default;
+
+      const canvas = await html2canvas(clonedElement, {
+        scale: 2,
+        useCORS: true,
+        backgroundColor: "#ffffff",
+      });
+
+      const imgData = canvas.toDataURL("image/png");
+      const pdf = new PDFClass("p", "mm", "a4");
+      const pdfWidth = pdf.internal.pageSize.getWidth();
+      const pdfHeight = (canvas.height * pdfWidth) / canvas.width;
+      pdf.addImage(imgData, "PNG", 0, 0, pdfWidth, pdfHeight);
+      
+      const invoiceNo = methods.getValues("invoiceNumber") || "proforma";
+      pdf.save(`${invoiceNo}.pdf`);
+
+      document.body.removeChild(tempContainer);
+    } catch (error) {
+      console.error("PDF generation failed", error);
+      alert("Failed to generate PDF. Please try again.");
+    }
   };
 
   return (
