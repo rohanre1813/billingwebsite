@@ -116,6 +116,16 @@ export default function RootLayout({
             </Script>
           </>
         )}
+
+        {/* Google AdSense — verification script */}
+        {process.env.NODE_ENV === "production" && (
+          <Script
+            id="google-adsense"
+            src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2865599533422047"
+            crossOrigin="anonymous"
+            strategy="afterInteractive"
+          />
+        )}
       </body>
     </html>
   );
