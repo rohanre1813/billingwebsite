@@ -253,6 +253,10 @@ h1, h2, h3, h4, h5, h6 {
   color: #9ca3af;
   font-size: 0.75rem;
   font-weight: 500;
+  overflow: hidden;
+  position: relative;
+  z-index: 0;
+  box-sizing: border-box;
 }
 
 /* Gradient backgrounds */

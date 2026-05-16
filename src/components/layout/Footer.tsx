@@ -23,7 +23,7 @@ const legal = [
 
 export default function Footer() {
   return (
-    <footer className="bg-gray-950 text-gray-300">
+    <footer className="bg-gray-950 text-gray-300" style={{ position: "relative", zIndex: 1, clear: "both" }}>
       {/* Main Footer */}
       <div className="container-xl py-16">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">

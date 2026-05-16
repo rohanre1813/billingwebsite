@@ -28,42 +28,31 @@ export default function ReceiptPage() {
   const data = watch();
 
   const handleDownloadPDF = async () => {
-    const originalElement = document.getElementById("receipt-preview");
-    if (!originalElement) return;
+    const element = document.getElementById("receipt-preview");
+    if (!element) return;
 
     try {
-      const tempContainer = document.createElement("div");
-      tempContainer.style.position = "absolute";
-      tempContainer.style.left = "-9999px";
-      tempContainer.style.top = "-9999px";
-      tempContainer.style.width = "800px";
-      document.body.appendChild(tempContainer);
-
-      const clonedElement = originalElement.cloneNode(true) as HTMLElement;
-      clonedElement.classList.remove("hidden");
-      clonedElement.style.display = "block";
-      tempContainer.appendChild(clonedElement);
-
-      const { default: html2canvas } = await import("html2canvas");
+      const { toPng } = await import("html-to-image");
       const jsPDFModule = await import("jspdf");
       const PDFClass = jsPDFModule.jsPDF || jsPDFModule.default;
 
-      const canvas = await html2canvas(clonedElement, {
-        scale: 2,
-        useCORS: true,
+      const dataUrl = await toPng(element, {
+        quality: 1,
+        pixelRatio: 2,
         backgroundColor: "#ffffff",
       });
 
-      const imgData = canvas.toDataURL("image/png");
+      const img = new Image();
+      img.src = dataUrl;
+      await new Promise((resolve) => { img.onload = resolve; });
+
       const pdf = new PDFClass("p", "mm", "a4");
       const pdfWidth = pdf.internal.pageSize.getWidth();
-      const pdfHeight = (canvas.height * pdfWidth) / canvas.width;
-      pdf.addImage(imgData, "PNG", 0, 0, pdfWidth, pdfHeight);
-      
+      const pdfHeight = (img.height * pdfWidth) / img.width;
+      pdf.addImage(dataUrl, "PNG", 0, 0, pdfWidth, pdfHeight);
+
       const receiptNo = getValues("receiptNumber") || "receipt";
       pdf.save(`${receiptNo}.pdf`);
-
-      document.body.removeChild(tempContainer);
     } catch (error) {
       console.error("PDF generation failed", error);
       alert("Failed to generate PDF. Please try again.");
